@@ -17,6 +17,7 @@
             <ul id="sidemenu">
                 <li> <a href="#header">HOME</a></li>
                 <li> <a href="#about">ABOUT</a></li>
+                <li> <a href="#about">EXPERIENCE</a></li>
                 <li> <a href="#myproject">MY PROJECTS</a></li>
                 <li> <a href="#contact">CONTACT</a></li>
                 <i class="fa-solid fa-circle-xmark" onclick="closemenu()" ></i>
@@ -34,15 +35,15 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/_____________________-removebg-preview.png" alt="">
+                <img src="images/DSC_5630-removebg-preview.png" alt="">
             </div>
             <div class="about-col-2">
                 <h1 class="subtitle">About Me</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure eos iusto voluptatem quia, vitae, laudantium est incidunt adipisci illum nihil nisi exercitationem possimus at libero, repudiandae labore laboriosam a beatae Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et cumque cupiditate hic harum facere corrupti, delectus excepturi, impedit libero recusandae itaque porro, asperiores minima unde a! Perferendis laboriosam ipsa, optio explicabo itaque fugit quibusdam laborum rem odit iusto facilis eveniet id libero. Provident error amet explicabo non ab eligendi quis!</p>
+                <p>I’m a Data Analyst with 3+ years of experience spanning software development, database administration, healthcare operational analytics, and cloud data pipelines. I work with SQL, Python, Tableau, Power BI, Snowflake, Amazon Redshift, and predictive modeling to turn operational data into actionable insights. I enjoy building reliable data workflows, stakeholder-ready dashboards, and practical AI solutions that make complex data easier to understand and use.</p>
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
-                    <p class="tab-links onclick=" onclick="opentab('Experience')">Experience</p>
-                    <p class="tab-links onclick=" onclick="opentab('Education')">Education </p>
+                    <p class="tab-links active-link" onclick="opentab(event, 'Skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'Experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'Education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="Skills" >
                     <ul>
@@ -54,16 +55,16 @@
                     </ul>
                 </div>
                 <div class="tab-contents" id="Experience">
-                   <ul>
-                     <li><span>Netlink Bhopal, M.P. (Jan 2023 - Feb 2023)</span><br>Digital Insight Intern - Customized web pages using HTML, Bootstrap, CSS; contributed to HR management projects.</li>
-                     <li><span>Fashion Show Team Leader, LNCTS (Apr 2022 - May 2022)</span><br>Led a team of 10, organized college fashion show, increased attendance by 20%.</li>
-                     <li><span>PME Club, IIT (Aug 2025 - Present)</span><br>Social Media Coordinator - Managed club’s social media, increased engagement by 25%.</li>
+                    <ul>
+                     <li><span>Dr. Huma Alam Clinic — Data Analyst (June 2026 - August 2026)</span><br>Managed patient data entry, billing, and claims processing for 100+ patient records daily using AdvancedMD. Wrote SQL CTE queries to reconcile billing and claims data and supported Tableau/Redshift reporting, reducing report turnaround from about one week to same-day delivery.</li>
+                     <li><span>Skip Repairs LLC — Full-Stack Developer (June 2025 - May 2026)</span><br>Built React, Node.js, SQL, and Supabase features for a leasing platform. Resolved 500+ support and bug tickets across 75 vehicle accounts and 200–300+ users. Built an automated driver's-license OCR lease-generation pipeline that reduced processing time from about 5 minutes to 1 minute.</li>
+                     <li><span>Netlink — Data Analyst (May 2022 - August 2024)</span><br>Built 10–15 Tableau and Power BI dashboards for 30–50 stakeholders, saving approximately 5–10 hours per week in manual reporting. Wrote SQL across 500K–2M+ records and supported 5–8 internal applications and database administration.</li>
                     </ul>
                 </div>
                 <div class="tab-contents" id="Education">
                     <ul>
-                     <li><span>Illinois Institute of Technology</span><br>Masters in IT & Management (Data Science & Applied AI), Expected Dec 2026</li>
-                     <li><span>Lakshmi Narain College of Technology and Science</span><br>B.Tech in Electronics & Communication Engineering, June 2024</li>
+                     <li><span>Illinois Institute of Technology — Chicago, IL (May 2026)</span><br>Master of Science, Information Technology and Management — Data Science & Applied AI</li>
+                     <li><span>Rajiv Gandhi Proudyogiki Vishwavidyalaya (RGPV) — Bhopal, India (June 2024)</span><br>Bachelor of Technology, Electronics and Communication Engineering</li>
                     </ul>
                 </div>
             </div>
@@ -76,33 +77,30 @@
         <h1 class="subtitle">My Projects</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/Unlocking the Secrets of Color Theory in Web Design.jpeg" >
+                <img src="images/Unlocking the Secrets of Color Theory in Web Design.jpeg" alt="PredicX predictive maintenance project">
                 <div class="layer">
-                 <h3>Readiculous – Hybrid Book Recommendation System</h3>
-                 <p>Developed a hybrid recommendation system in Flutter, trained on GoodReads 100k dataset. Built ML models (XGBoost, KMeans, KNN, SVD, Logistic Regression) achieving 97.74% accuracy. Backend: Node.js, Flask, MySQL.</p>
-                 <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                </div>
-                
-            </div>
-            <div class="work">
-                <img src="images/Search Analysis Logo (1) 2.42.10 PM.jpg" >
-                <div class="layer">
-                    <h3>Uniquest – University Finder App</h3>
-                    <p>Cross-platform Flutter app with MySQL database to find U.S. universities based on GRE/TOEFL scores, tuition, and location. Backend in Node.js.</p>
-                    <a href="https://github.com/whoseunassailable/uni_quest_project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                
+                    <h3>PredicX — AI-Driven Predictive Maintenance</h3>
+                    <p>Led a team of three to build an end-to-end data platform processing 120,000+ maintenance records. Built an XGBoost failure-risk model, interactive React dashboard, SHAP explanations, and BERTopic classification of 63 defect categories.</p>
+                    <a href="https://github.com/mehhakh13/ai-predictive-maintenance-capstone" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="work">
-                <img src="images/Unlocking the Secrets of Color Theory in Web Design.jpeg" >
+                <img src="images/Unlocking the Secrets of Color Theory in Web Design.jpeg" alt="Book recommendation system">
                 <div class="layer">
-                    <h3>AI Summarizer</h3>
-                    <p>AI-powered text summarization tool led by a team of 4. Improved summarization efficiency by 35% using NLP algorithms and iterative testing.</p>
-                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-                 </div>
+                    <h3>Book Recommendation System & Model Evaluation</h3>
+                    <p>Developed a hybrid collaborative and content-based recommendation system on a 100K-record dataset. Benchmarked XGBoost, KNN, K-Means, Logistic Regression, and SVD, achieving 97.74% prediction accuracy.</p>
+                    <a href="#" aria-label="Readiculous GitHub repository to be added"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Search Analysis Logo (1) 2.42.10 PM.jpg" alt="Uni Quest university finder app">
+                <div class="layer">
+                    <h3>Uni Quest — University Finder App</h3>
+                    <p>Led a 4-person team, designed core UI flows, built the Flutter frontend, and wrote SQL CRUD operations supporting the app's relational data flows.</p>
+                    <a href="https://github.com/whoseunassailable/uni_quest_project" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
             </div>
         </div>
-        <a href="#" class="btn">See more</a>
     </div>
 </div>
 <!-- ---------------------------contact------- -->
@@ -111,12 +109,12 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="subtitle">Contact Me</h1>
-                <p><i class="fa-solid fa-envelope"></i>mehakhussain7868@gmail.com</p>
-                <p><i class="fa-solid fa-phone"></i>01(630)4922566</p>
+                <p><i class="fa-solid fa-envelope"></i>mehak.dataengineer@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>(630) 492-2566</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/mehakhussain/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/mehakhussain/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i></a>
                 </div>
-                <a href="./images/resume_data.pdf" download class ="btn btn2">Download CV</a>
+                <a href="./images/Mehak_Hussain_Resume_DataAnalyst.pdf" download class ="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -139,11 +137,11 @@
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");
 
-    function opentab(tabname){
-        for(tablink of tablinks){
+    function opentab(event, tabname){
+        for (const tablink of tablinks) {
             tablink.classList.remove("active-link");
         }
-        for(tabcontent of tabcontents){
+        for (const tabcontent of tabcontents) {
             tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
@@ -167,7 +165,7 @@
 <!-- ------GOOGLEFORM--------- -->
 
 <script>
-    const scriptURL = '<https://script.google.com/macros/s/AKfycbxhJGiQxl4BJ8uGgBikkiPhJNmfhieBjp9x5no9t7YE8JuDgfpzvxS1beGXvv3TlId3TQ/exec>'
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxhJGiQxl4BJ8uGgBikkiPhJNmfhieBjp9x5no9t7YE8JuDgfpzvxS1beGXvv3TlId3TQ/exec'
     const form = document.forms['submit-to-google-sheet']
     const message=document.getElementById("message")
     form.addEventListener('submit', e => {
@@ -181,7 +179,10 @@
             form.reset()
 
         })
-        .catch(error => console.error('Error!', error.message))
+        .catch(error => {
+            message.innerHTML = 'Something went wrong. Please try again.';
+            console.error('Error!', error.message);
+        })
     })
 </script>
 
